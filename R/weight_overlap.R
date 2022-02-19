@@ -34,7 +34,7 @@ weight_overlap <- function(shp1, shp_atom, shp2, crs1="+proj=laea +lat_0=10 +lon
   if(length(new.packages)) install.packages(new.packages)
   
   # Packages loading
-  invisible(lapply(packages, library, character.only = TRUE))
+  lapply(list.of.packages, require, character.only = TRUE)
   
   ##step 1: project data, and ensure that self intersecting geographies are taken care of, for all three levels of geog. 
   shp1 <- spTransform(shp1, CRS(crs1)) %>%
