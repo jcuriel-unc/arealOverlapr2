@@ -60,3 +60,5 @@ The outputted data frame is below.
 
 
 ![Example2](example_overlap_output.jpg)
+
+We see that the ID's and dyadic ID are present within the first three columns. The pop_wt field reflects the estimated population present within the intersection between the specified polygons from the first and second shapefiles. Note that the numbers have not been rounded. Additionally, should the user have specified any other census fields, then they will appear with the "-wt" tail in the column name. The shp1pop and shp2pop fields reflect the total population for the sepcified entire polygons for the first and second shapefiles respectively. The overlap1 field reflects the proportion of the first shapefile's specified polygon that is nested within the second shapefile. The field ranges from effectively 0 to 1, where 1 equates to complete nesting within a single polygon from the second shapefile.  
