@@ -83,3 +83,24 @@ test_herf <- herfindahl_new(test_output,"pop_wt",  "id1")
  
  ![Example3](example_herf_output.jpg)
  
+ ## Matching polygons to their best match
+ 
+ Many scholars will want to use this package to perhaps assign the first level of geograpghy to the second level that it has the best match with. For example, looking at maps of districts across time, some might use level 1 as the "parent" districts, and seek to identify the closest "child", which would consist of the ensuing district that comprises the highest degree of shared space, relative to others. Scholars interested in performing this should first run the aforementioned herfindahl_new command to ensure that the process is not too noisy. Upon doing so, the command "best_match_new" can accomplish this. The command works as follows, 
+ 
+best_match_new(overlap_dyad_output, "id1")
+
+overlap_dyad_output: The output from the overlap_dyad_creatr command.  
+id1: The name of the unique string/character ID field of interest; defaults to "id1" 
+
+The command slices the data by identifying the set of rows associated with a unique id name, and keeps the row with the maximum overlap1 score. Therefore, there is one row for every unique id1 value. 
+
+Finally, the command "correct_match_shp2" informs the user of the accuracy of using the aforementioned method of a 1 to 1 match of the first level of geography to the second. The command works by allocating only the population of the wholly matched first level of geography to the second, with the output of percent accuracy. The command works as follows. 
+
+correct_match_shp2(overlap_dyad_output,"id1",'id2')
+overlap_dyad_output: The output from the overlap_dyad_creatr command.  
+id1: The name of the unique string/character ID field of interest; defaults to "id1" 
+id2: The name of the unique string/character ID field of interest; defaults to "id2" 
+
+Upon running the command, the output will be as follows. 
+
+ 
