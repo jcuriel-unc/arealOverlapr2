@@ -59,4 +59,4 @@ test_output <- overlap_dyad_creatr(test_overlap, id1="ZCTA5CE10",id2="id", censu
 The outputted data frame is below. 
 
 
-![Example2](example_overlap_output.png)
+![Example2](example_overlap_output.jpg)
