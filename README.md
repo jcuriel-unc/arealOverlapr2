@@ -62,3 +62,19 @@ The outputted data frame is below.
 ![Example2](example_overlap_output.jpg)
 
 We see that the ID's and dyadic ID are present within the first three columns. The pop_wt field reflects the estimated population present within the intersection between the specified polygons from the first and second shapefiles. Note that the numbers have not been rounded. Additionally, should the user have specified any other census fields, then they will appear with the "-wt" tail in the column name. The shp1pop and shp2pop fields reflect the total population for the sepcified entire polygons for the first and second shapefiles respectively. The overlap1 field reflects the proportion of the first shapefile's specified polygon that is nested within the second shapefile. The field ranges from effectively 0 to 1, where 1 equates to complete nesting within a single polygon from the second shapefile.  
+
+## Checking Results 
+
+An important feature that most users of this package might want to know is the degree to which polygons from one of the levels of geography perfectly nest. This would take the form of the effective number of polygons from level 2 within level 1, or vice-versa. This can be accomplished with the "herfindahl_new" command. The command works by summing the squared overlap scores (on a 0 - 1 scale) for all components of a single level. The command takes the following arguments. 
+
+herfindahl_new(overlap_dyad_output, pop_field, id1)
+
+overlap_dyad_output: The output from the overlap_dyad_creatr command. 
+pop_field: The name of the dyadic population field from the intersection of the two levels of geography; defaults to "pop_wt". 
+id1: The name of the unique string/character ID field of interest; defaults to "id1"  
+
+Example: 
+test_herf <- herfindahl_new(test_output,"pop_wt",  "id1")
+ )
+ 
+ 
