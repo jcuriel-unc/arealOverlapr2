@@ -38,6 +38,9 @@ overlap_dyad_creatr <- function(weight_output, id1, id2, census_fields){
   new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
   if(length(new.packages)) install.packages(new.packages)
   
+  # Packages loading
+  invisible(lapply(packages, library, character.only = TRUE))
+  
   ##Step 1; calculate and weight the census fields of interest 
   if (missing(census_fields) == FALSE) {
     temp_var_name <- paste(census_fields, "wt", sep = "_")
