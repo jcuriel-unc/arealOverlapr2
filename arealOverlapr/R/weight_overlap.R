@@ -43,11 +43,11 @@ weight_overlap <- function(shp1, shp_atom, shp2, crs1="+proj=laea +lat_0=10 +lon
   
   ##step 2: convert these sp objects into an sf object 
   shp1 <- st_as_sf(shp1)
-  shp1 <- st_transform(shp1, "+init=epsg:2163")
+  shp1 <- st_transform(shp1, crs2)
   shp_atom <- st_as_sf(shp_atom)
-  shp_atom <- st_transform(shp_atom, "+init=epsg:2163")
+  shp_atom <- st_transform(shp_atom, crs2)
   shp2 <- st_as_sf(shp2)
-  shp2 <- st_transform(shp2, "+init=epsg:2163")
+  shp2 <- st_transform(shp2, crs2)
   
   ##step 2.5: calc area for atomic unit 
   shp_atom$area_cb <- st_area(shp_atom)
@@ -75,4 +75,3 @@ weight_overlap <- function(shp1, shp_atom, shp2, crs1="+proj=laea +lat_0=10 +lon
   
   
 }
-
