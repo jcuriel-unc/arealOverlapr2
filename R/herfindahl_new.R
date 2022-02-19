@@ -54,6 +54,7 @@ herfindahl_new <- function(overlap_dyad_output, pop_field, id1){
   
   ##step 4: Get the effective number 
   shp1_herfindahl$eff_num <- 1/shp1_herfindahl$herf_index
+  return(shp1_herfindahl)
   
   
 }
