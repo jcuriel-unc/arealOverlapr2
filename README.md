@@ -77,4 +77,9 @@ Example:
 test_herf <- herfindahl_new(test_output,"pop_wt",  "id1")
  )
  
+ The Figure below demonstrates the output of the command, with id1 reflecting the inputted ID, and the herfindahl index the degree of diversity across the second level of geography's polygons, with values approaching 0 equating to complete heterogenity/splits, and scores approaching 1 complete homogeneity/nestedness. The eff_num reflects the effective number of level 2 polygons within the level 1 polygons, which amounts to the inverse of the herfindahl index. These values have a floor of 1 and no upper limit. Note that scores above 1.333 should warrant caution for the ensuing commands. 
+ 
+ 
+ 
+ ![Example3](example_herf_output.jpg)
  
