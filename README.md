@@ -9,7 +9,9 @@ library(arealOverlapr)
 
 ## Requirements 
 
-In order to run the package, three shapefiles are necessary. Two of these shapefiles consist of the goegraphies that the user is interested in finding the overlap between. The third consists of the atomic level Census geography. This should consist of a precise level of geography on par with Census blocks or block groups within the U.S. These shall act as a grid that informs the overlay between two actual shapefiles of interest.  
+In order to run the package, three shapefiles are necessary. Two of these shapefiles consist of the goegraphies that the user is interested in finding the overlap between. The third consists of the atomic level Census geography. This should consist of a precise level of geography on par with Census blocks or block groups within the U.S. These shall act as a grid that informs the overlay between two actual shapefiles of interest. 
+
+![Example](pop_overlap_example.png)
 
 ## Creating the spatial dyadic matrix 
 
