@@ -39,7 +39,7 @@ overlap_dyad_creatr <- function(weight_output, id1, id2, census_fields){
   if(length(new.packages)) install.packages(new.packages)
   
   # Packages loading
-  invisible(lapply(packages, library, character.only = TRUE))
+  invisible(lapply(list.of.packages, library, character.only = TRUE))
   
   ##Step 1; calculate and weight the census fields of interest 
   if (missing(census_fields) == FALSE) {
