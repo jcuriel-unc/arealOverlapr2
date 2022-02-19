@@ -32,6 +32,10 @@ weight_overlap <- function(shp1, shp_atom, shp2, crs1="+proj=laea +lat_0=10 +lon
   list.of.packages <- c("sp","sf", "areal", "stringr", "rgdal", "rgeos", "raster", "tidyverse")
   new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
   if(length(new.packages)) install.packages(new.packages)
+  
+  # Packages loading
+  invisible(lapply(packages, library, character.only = TRUE))
+  
   ##step 1: project data, and ensure that self intersecting geographies are taken care of, for all three levels of geog. 
   shp1 <- spTransform(shp1, CRS(crs1)) %>%
     gBuffer(byid=T, width=0)
