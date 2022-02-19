@@ -3,12 +3,8 @@
 #' This function takes the raw output of the weight_overlap function (also part of the arealOverlapr pkg), and calculates the 
 #' population overlap between two levels of geography, and the demographic information of interest from census data. 
 #' @param overlap_dyad_output The outputted data frame from the overlap_dyad_creatr function
-#' @param shp_atom The atomic unit of geography shpfile that will be used to calculate the spatial weights by population
 #' @param id1 The ID field (chr) from the first shpfile of interest. 
-#' @param id2 The ID field (chr) from the second shpfile of interest.
-#' @param census_fields The string vector of other population fields of interest referring to census data that should be caclulated, 
-#' which amounts to the raw weighted number of the individuals part of the demographic in question residing within the overlap of the 
-#' two shpfile polygons of interest 
+#' @param pop_field The population field of the intersection between the first and second shapefiles; defaults to pop_wt from the overlap_dyad_creatr output 
 
 #' @return The data frame with the dyadic population overlap between the first and second shapefiles. The following are the values:
 #'    \itemize{
