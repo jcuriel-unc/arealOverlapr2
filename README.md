@@ -122,6 +122,6 @@ Upon running the command, the output will be as follows.
 
  ![Example4](example_correct_output.jpg)
  
-The output informs the user of the "correctly_matched_pop" using the pluralistic 1 to 1 assignment mentioned above. The pop_wt field reflects the population estimated for the second level of geography from the atomic census units. The "correct_pct" is a 0-1 scale of the degree of accuracy. Scores should ideally be 1, and will be the case in the event that the second level of geography splits no first level units. Scores approaching zero reflect complete uncertainty due to poor nestedness between the first and second levels of geography. Consistently low scoring polygons should be treated with extreme caution, and more nuanced approaches than a 1 to 1 match should be taken. 
+The output informs the user of the "correctly_matched_pop" using the pluralistic 1 to 1 assignment mentioned above. The pop_wt field reflects the population estimated for the second level of geography from the atomic census units. The "correct_pct" is a 0-1 scale of the degree of accuracy. Scores should ideally be 1, and will be in the event that the second level of geography splits no first level units. Scores approaching 0 reflect complete uncertainty due to poor nestedness between the first and second levels of geography. Consistently low scoring polygons should be treated with extreme caution, and more nuanced approaches than a 1 to 1 match should be taken. 
 
  
